@@ -1,6 +1,6 @@
 {
   "name": "pipedrive-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Model Context Protocol server for Pipedrive API integration",
   "main": "src/index.js",
   "type": "module",
