@@ -19,8 +19,7 @@
     "api",
     "claude",
     "cursor",
-    "modelcontextprotocol",
-    "smithery"
+    "modelcontextprotocol"
   ],
   "author": "",
   "license": "MIT",
@@ -42,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/pipedrive-mcp-server.git"
+    "url": "git+https://github.com/WillDent/mcp-pipedrive.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/pipedrive-mcp-server/issues"
+    "url": "https://github.com/WillDent/mcp-pipedrive/issues"
   },
-  "homepage": "https://github.com/yourusername/pipedrive-mcp-server#readme",
+  "homepage": "https://github.com/WillDent/mcp-pipedrive#readme",
   "smithery": {
     "type": "mcp-server",
     "configSchema": {
