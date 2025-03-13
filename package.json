@@ -4,10 +4,14 @@
   "description": "Model Context Protocol server for Pipedrive API integration",
   "main": "src/index.js",
   "type": "module",
+  "bin": {
+    "pipedrive-mcp-server": "./src/index.js"
+  },
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "pipedrive",
@@ -15,7 +19,8 @@
     "api",
     "claude",
     "cursor",
-    "windsurf"
+    "modelcontextprotocol",
+    "smithery"
   ],
   "author": "",
   "license": "MIT",
@@ -28,5 +33,29 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/pipedrive-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/pipedrive-mcp-server/issues"
+  },
+  "homepage": "https://github.com/yourusername/pipedrive-mcp-server#readme",
+  "smithery": {
+    "type": "mcp-server",
+    "configSchema": {
+      "pipedriveApiToken": {
+        "type": "string",
+        "description": "Your Pipedrive API token",
+        "required": true
+      }
+    }
   }
 } 

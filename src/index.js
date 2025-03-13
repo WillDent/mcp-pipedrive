@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { ListResourcesRequestSchema, ListPromptsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
@@ -5,6 +7,20 @@ import { z } from "zod";
 import dotenv from "dotenv";
 import { setupPipedriveClient, getApiInstance } from "./services/pipedriveService.js";
 import logger from "./utils/logger.js";
+
+// Parse config from command line arguments if provided
+const configArgIndex = process.argv.indexOf('--config');
+if (configArgIndex > -1 && configArgIndex < process.argv.length - 1) {
+  try {
+    const config = JSON.parse(process.argv[configArgIndex + 1]);
+    if (config.pipedriveApiToken) {
+      process.env.PIPEDRIVE_API_TOKEN = config.pipedriveApiToken;
+      logger.info('Pipedrive API token loaded from config argument');
+    }
+  } catch (error) {
+    logger.error(`Error parsing config: ${error.message}`);
+  }
+}
 
 // Load environment variables
 dotenv.config();
