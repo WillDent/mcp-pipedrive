@@ -41,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WillDent/mcp-pipedrive.git"
+    "url": "git+https://github.com/WillDent/pipedrive-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/WillDent/mcp-pipedrive/issues"
+    "url": "https://github.com/WillDent/pipedrive-mcp-server/issues"
   },
-  "homepage": "https://github.com/WillDent/mcp-pipedrive#readme",
+  "homepage": "https://github.com/WillDent/pipedrive-mcp-server#readme",
   "smithery": {
     "type": "mcp-server",
     "configSchema": {
