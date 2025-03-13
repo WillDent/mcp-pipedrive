@@ -1,0 +1,32 @@
+{
+  "name": "pipedrive-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Pipedrive API integration",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pipedrive",
+    "mcp",
+    "api",
+    "claude",
+    "cursor",
+    "windsurf"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "pipedrive": "^16.0.0",
+    "winston": "^3.10.0",
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+} 

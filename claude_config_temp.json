@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "local-supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:postgres@127.0.0.1:55322/postgres"
+      ]
+    },
+    "jdbc": {
+      "command": "jbang",
+      "args": [
+        "jdbc@quarkiverse/quarkus-mcp-servers",
+        "jdbc:sqlserver://192.168.4.57:1435;databaseName=PARAGON;user=jbuser;password=Para80n1;encrypt=false"
+      ]
+    },
+    "mcp-server-motherduck": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-motherduck"
+      ],
+      "env": {
+        "motherduck_token": "",
+        "HOME": "/Users/willdent/Documents/DEV/_clients/3strand/TampaSteel/duckdb/evidence_2025/sources/tbs/"
+      }
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "pipedrive": {
+      "command": "node",
+      "args": ["/Users/willdent/Documents/DEV/pipedrive/mcp2/src/index.js"],
+      "cwd": "/Users/willdent/Documents/DEV/pipedrive/mcp2",
+      "env": {
+        "PIPEDRIVE_API_TOKEN": "46182806f84486fc91c9085bf872b806dfd7394a"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "BSAbVS3Sk-CpAAvPi659px7EeqCE0Dt"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/willdent/Desktop",
+        "/Users/willdent/Documents/DEV/_clients/3strand/TampaSteel/duckdb/evidence_2025/sources/tbs/",
+        "/Users/willdent/Documents/DEV/pipedrive/mcp2/"
+      ]
+    }
+  },
+  "globalShortcut": "Ctrl+Space"
+} 
